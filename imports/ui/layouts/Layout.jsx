@@ -8,7 +8,7 @@ import palette from './Palette.jsx';
 
 import AppBar from './AppBar.jsx';
 import SideBar from './SideBar.jsx';
-import DashFAB from '../components/dashboards/DashFAB.jsx';
+import FloatingActionButton from './FloatingActionButton.jsx';
 
 const theme = createMuiTheme({ palette });
 
@@ -29,7 +29,7 @@ const Layout = (props) => {
     <MuiThemeProvider theme={theme}>
       <AppBar />
       <SideBar />
-      <DashFAB />
+      <FloatingActionButton />
       <div className={classes.root}>
         <div className={classes.container}>
           {props.children}

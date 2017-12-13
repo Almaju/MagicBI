@@ -34,32 +34,23 @@ class NestedList extends React.Component {
 
     return (
       <List className={classes.root} subheader={<ListSubheader>Nested List Items</ListSubheader>}>
-        <ListItem button>
-          <ListItemIcon>
-            <SendIcon />
-          </ListItemIcon>
-          <ListItemText inset primary="Sent mail" />
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <DraftsIcon />
-          </ListItemIcon>
-          <ListItemText inset primary="Drafts" />
-        </ListItem>
         <ListItem button onClick={this.handleClick}>
-          <ListItemIcon>
-            <InboxIcon />
-          </ListItemIcon>
-          <ListItemText inset primary="Inbox" />
+          <ListItemText inset primary="Getting Started" />
           {this.state.open ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
         <Collapse component="li" in={this.state.open} timeout="auto" unmountOnExit>
           <List disablePadding>
             <ListItem button className={classes.nested}>
-              <ListItemIcon>
-                <StarBorder />
-              </ListItemIcon>
-              <ListItemText inset primary="Starred" />
+              <ListItemText inset primary="Introduction" />
+            </ListItem>
+            <ListItem button className={classes.nested}>
+              <ListItemText inset primary="How to use" />
+            </ListItem>
+            <ListItem button className={classes.nested}>
+              <ListItemText inset primary="Tracking Tools" />
+            </ListItem>
+            <ListItem button className={classes.nested}>
+              <ListItemText inset primary="Conventions" />
             </ListItem>
           </List>
         </Collapse>

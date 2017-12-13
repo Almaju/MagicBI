@@ -5,7 +5,7 @@ import Button from 'material-ui/Button';
 import Dialog from 'material-ui/Dialog';
 import AddIcon from 'material-ui-icons/Add';
 
-import ConnectorsList from '../connectors/ConnectorsList.jsx';
+import ConnectorsList from '../components/connectors/ConnectorsList.jsx';
 
 const styles = {
   button: {
@@ -15,7 +15,7 @@ const styles = {
   },
 };
 
-class DashFAB extends React.Component {
+class FloatingActionButton extends React.Component {
   state = {
     open: false,
   };
@@ -43,8 +43,8 @@ class DashFAB extends React.Component {
   }
 }
 
-DashFAB.propTypes = {
+FloatingActionButton.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(DashFAB);
+export default withStyles(styles)(FloatingActionButton);
