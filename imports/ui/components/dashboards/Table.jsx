@@ -14,26 +14,22 @@ const styles = {
   },
 };
 
-function BasicTable(props) {
+const BasicTable = (props) => {
   const { classes, header, data } = props;
-
-  console.log(props);
 
   return (
     <Paper className={classes.root}>
       <Table className={classes.table}>
         <TableHead>
           <TableRow>
-            {header.map(v => (
-              <TableCell>{v}</TableCell>
-            ))}
+            {header.map(v => (<TableCell key={`header-${v}`}>{v}</TableCell>))}
           </TableRow>
         </TableHead>
         <TableBody>
-          {data.map((n, i) => (
-            <TableRow key={i}>
-              {n.map(v => (
-                <TableCell>{v}</TableCell>
+          {data.map(n => (
+            <TableRow key={`row-${n.id}`}>
+              {header.map(v => (
+                <TableCell key={`cell-${n.id}-${v}`}>{n[v]}</TableCell>
               ))}
             </TableRow>
             ))}
@@ -41,7 +37,7 @@ function BasicTable(props) {
       </Table>
     </Paper>
   );
-}
+};
 
 BasicTable.propTypes = {
   classes: PropTypes.object.isRequired,

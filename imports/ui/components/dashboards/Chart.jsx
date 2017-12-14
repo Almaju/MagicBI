@@ -1,10 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-const Chart = () => (
-  <div></div>
-  /* <ResponsiveContainer width="100%" height={300}>
+const Chart = (props) => {
+  const { data } = props;
+
+  return (
+  <ResponsiveContainer width="100%" height={300}>
     <LineChart
           data={data}
           margin={{
@@ -19,7 +22,14 @@ const Chart = () => (
           {keys.map(n =>
             <Line type="monotone" dataKey={n} stroke="#82ca9d" />)}
         </LineChart>
-  </ResponsiveContainer> */
-);
+  </ResponsiveContainer>);
+};
+
+Chart.propTypes = {
+  data: PropTypes.array,
+};
+Chart.defaultProps = {
+  data: [],
+};
 
 export default Chart;

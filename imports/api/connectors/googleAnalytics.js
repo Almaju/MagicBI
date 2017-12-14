@@ -8,14 +8,12 @@ const gapiConnector = {
 
   get(args) {
     const url = `https://www.googleapis.com/analytics/v3/data/ga?${args}&access_token=${this.token}`;
-    console.log(url);
     return HTTP.get(url).data;
   },
 
   parse(args) {
     const res = this.get(args);
     const data = [];
-    console.log(res);
     res.rows.forEach((row, i) => {
       const doc = {
         id: i,
