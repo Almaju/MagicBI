@@ -25,3 +25,5 @@ universe:i18n
 react-meteor-data
 accounts-google
 danopia:google-api
+apollo
+swydo:ddp-apollo

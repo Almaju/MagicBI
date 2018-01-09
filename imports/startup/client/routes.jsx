@@ -10,6 +10,7 @@ import i18n from 'meteor/universe:i18n';
 
 import Layout from '../../ui/layouts/Layout.jsx';
 import Home from '../../ui/pages/Home.jsx';
+import Test from '../../ui/pages/Test.jsx';
 import NotFound from '../../ui/pages/NotFound.jsx';
 // import Groups from '../../ui/pages/Groups.jsx';
 // import Rides from '../../ui/pages/Rides.jsx';
@@ -21,6 +22,7 @@ const renderRoutes = () => (
     <Layout>
       <Switch>
         <Route exact name="home" path="/" component={Home} />
+        <Route exact name="test" path="/test" component={Test} />
         <Route component={NotFound} />
       </Switch>
     </Layout>

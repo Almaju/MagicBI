@@ -26,7 +26,7 @@ const Dashboard = (props) => {
         <Filters />
       </Grid>
       <Grid item xs={8}>
-        <Chart data={data} />
+        {/*<Chart data={data} />*/}
         <Table header={header} data={data} />
       </Grid>
     </Grid>
